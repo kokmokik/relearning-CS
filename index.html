@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #1a1a2e;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .calculator {
+      background-color: #16213e;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      width: 320px;
+    }
+
+    .display {
+      background-color: #0f3460;
+      border-radius: 12px;
+      padding: 20px 16px 12px;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    .display .expression {
+      color: #a0aec0;
+      font-size: 14px;
+      min-height: 20px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .display .current {
+      color: #e2e8f0;
+      font-size: 36px;
+      font-weight: 300;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      height: 60px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.1s, opacity 0.1s;
+    }
+
+    button:active {
+      transform: scale(0.94);
+      opacity: 0.85;
+    }
+
+    /* Number buttons */
+    .btn-num {
+      background-color: #1a1a2e;
+      color: #e2e8f0;
+    }
+
+    /* Operator buttons */
+    .btn-op {
+      background-color: #e94560;
+      color: #ffffff;
+    }
+
+    /* Function buttons (AC, +/-, %) */
+    .btn-fn {
+      background-color: #0f3460;
+      color: #a0aec0;
+    }
+
+    /* Equals button */
+    .btn-eq {
+      background-color: #e94560;
+      color: #ffffff;
+    }
+
+    /* Zero spans 2 columns */
+    .btn-zero {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="current" id="current">0</div>
+    </div>
+
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn-fn" id="btn-ac">AC</button>
+      <button class="btn-fn" id="btn-sign">+/-</button>
+      <button class="btn-fn" id="btn-percent">%</button>
+      <button class="btn-op" id="btn-divide">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn-num" id="btn-7">7</button>
+      <button class="btn-num" id="btn-8">8</button>
+      <button class="btn-num" id="btn-9">9</button>
+      <button class="btn-op" id="btn-multiply">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn-num" id="btn-4">4</button>
+      <button class="btn-num" id="btn-5">5</button>
+      <button class="btn-num" id="btn-6">6</button>
+      <button class="btn-op" id="btn-subtract">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn-num" id="btn-1">1</button>
+      <button class="btn-num" id="btn-2">2</button>
+      <button class="btn-num" id="btn-3">3</button>
+      <button class="btn-op" id="btn-add">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn-num btn-zero" id="btn-0">0</button>
+      <button class="btn-num" id="btn-dot">.</button>
+      <button class="btn-eq" id="btn-equals">=</button>
+    </div>
+  </div>
+
+  <script>
+    // JS logic goes here
+  </script>
+
+</body>
+</html>
